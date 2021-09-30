@@ -1,6 +1,8 @@
 #ifndef _STRING_H_
 #define _STRING_H_
 
+#include "stddef.h"
+
 extern void *memcpy(void * s1, const void * s2, size_t n);
 extern void *memmove(void *s1, const void *s2, size_t n);
 extern char *strcpy(char * s1, const char * s2);

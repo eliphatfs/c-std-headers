@@ -39,9 +39,9 @@ extern div_t div(int numer, int denom);
 extern ldiv_t ldiv(long int numer, long int denom);
 extern lldiv_t lldiv(long long int numer, long long int denom);
 extern int mblen(const char *s, size_t n);
-extern int mbtowc(wchar_t * pwc, const char * s, size_t n);
+/* extern int mbtowc(wchar_t * pwc, const char * s, size_t n);
 extern int wctomb(char *s, wchar_t wchar);
 extern size_t mbstowcs(wchar_t * pwcs, const char * s, size_t n);
-extern size_t wcstombs(char * s, const wchar_t * pwcs, size_t n);
+extern size_t wcstombs(char * s, const wchar_t * pwcs, size_t n); */
 
 #endif
