@@ -103,6 +103,7 @@ EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 /*
  * The characteristics of long double.
  * NOTE: long double is the same as double.
+ * MAYBE INACCURATE ON SOME PLATFORMS
  */
 #define LDBL_DIG	15
 #define LDBL_EPSILON	1.1102230246251568e-16L

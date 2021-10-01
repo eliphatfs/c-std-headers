@@ -1,7 +1,7 @@
 #ifndef _TIME_H_
 #define _TIME_H_
 
-#include "stddef.h"
+#include <stddef.h>
 
 struct tm {
     int tm_sec;

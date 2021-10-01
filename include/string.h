@@ -1,7 +1,11 @@
 #ifndef _STRING_H_
 #define _STRING_H_
 
-#include "stddef.h"
+#include <stddef.h>
+
+#ifndef NULL
+#define NULL ((void*)0)
+#endif
 
 extern void *memcpy(void * s1, const void * s2, size_t n);
 extern void *memmove(void *s1, const void *s2, size_t n);

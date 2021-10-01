@@ -1,10 +1,21 @@
 #ifndef _STDIO_H
 #define _STDIO_H
 
-#include "stddef.h"
-#include "stdarg.h"
+#include <stddef.h>
+#include <stdarg.h>
 
 typedef void FILE;  /* opaque to users */
+#define EOF (-1)
+
+#ifdef _WIN32
+extern char* __iob_func();
+#define stdin  (&__iob_func()[0])
+#define stdout (&__iob_func()[48])
+#define stderr (&__iob_func()[96])
+#else
+extern FILE *stdin, *stdout, *stderr;
+#endif
+
 typedef long fpos_t;
 extern int remove(const char *filename);
 extern int rename(const char *old, const char *new_);

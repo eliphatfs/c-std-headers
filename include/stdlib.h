@@ -1,7 +1,11 @@
 #ifndef _STDLIB_H_
 #define _STDLIB_H_
 
-#include "stddef.h"
+#include <stddef.h>
+
+#ifndef NULL
+#define NULL ((void*)0)
+#endif
 
 typedef struct { int quot, rem; } div_t;
 typedef struct { long quot, rem; } ldiv_t;
@@ -30,8 +34,7 @@ extern void _Exit(int status);
 extern char *getenv(const char *name);
 extern int system(const char *string);
 extern void *bsearch(const void *key, const void *base, size_t nmemb, size_t size, int (*compar)(const void *, const void *));
-extern void qsort(void *base, size_t nmemb, size_t size,
-extern int (*compar)(const void *, const void *));
+extern void qsort(void *base, size_t nmemb, size_t size, int (*compar)(const void *, const void *));
 extern int abs(int j);
 extern long int labs(long int j);
 extern long long int llabs(long long int j);
